@@ -21,7 +21,7 @@ const eventos: Evento[] = [
 
 export default function AcademicTimeline() {
   return (
-    <div className="bg-[#c2c5a0] p-8 rounded-2xl border border-[#3e423e] text-[#1a1c1a] font-mono shadow-inner mt-10">
+    <div className="bg-[#c2c5a0] p-8 rounded-sm border border-[#3e423e] text-[#1a1c1a] font-mono shadow-inner mt-10">
       <h2 className="text-2xl font-black mb-8 tracking-tighter uppercase border-b-2 border-[#1a1c1a]/20 pb-2">
         Timeline Académico
       </h2>

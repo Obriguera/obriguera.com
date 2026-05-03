@@ -15,8 +15,8 @@ export default function Perfil() {
         </p>
         <p className="mt-6 text-[#7a827a] leading-relaxed max-w-2xl">
           Hola!! Tengo 22 años y vivo en Córdoba, Argentina. Soy una persona que le gustan los desafíos y resolver problemas creativamente.
-          Me apasiona el mundo del software y videojuegos, entre otras cosas. 
-          Actualemnte estoy cursando el último año de mi carrera y dispuesto a afrontar nuevos proyectos y actividades.
+          Me apasionan el software y los videojuegos. 
+          Actualmente estoy cursando el último año de mi carrera y dispuesto a afrontar nuevos proyectos y actividades.
         </p>
         
         {/* Contacto rápido */}
@@ -42,6 +42,7 @@ export default function Perfil() {
             fill 
             className="object-cover"
             priority
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 25vw"
           />
         </div>
       </div>

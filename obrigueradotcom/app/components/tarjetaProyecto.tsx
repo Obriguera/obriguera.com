@@ -11,9 +11,9 @@ interface ProyectoProps {
 
 export default function TarjetaProyecto({ titulo, descripcion, tecnologias, link, imagenPlaceholder }: ProyectoProps) {
   return (
-    <div className="bg-[#242622] p-6 rounded-none border border-[#3e423e] flex flex-col h-full">
+    <div className="bg-[#242622] p-6 rounded-sm border border-[#3e423e] flex flex-col h-full">
       {/* Espacio para la imagen */}
-      <div className="h-40 bg-[#1a1c1a] border border-[#3e423e] rounded-none mb-4 flex items-center justify-center text-[#7a827a] italic">
+      <div className="h-40 bg-[#1a1c1a] border border-[#3e423e] rounded-sm mb-4 flex items-center justify-center text-[#7a827a] italic">
         {imagenPlaceholder || "Imagen Proyecto"}
       </div>
 

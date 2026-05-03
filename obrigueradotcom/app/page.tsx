@@ -4,6 +4,9 @@ import { useState } from "react";
 import Perfil from "./components/perfil"; // Importamos el nuevo componente
 import TarjetaProyecto from "./components/tarjetaProyecto";
 import AcademicTimeline from "./components/academicTimeline";
+import CodecMusic from "./components/codecMusic";
+import Training from "./components/Training";
+import Videogames from "./components/Videogames";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Home() {
@@ -95,12 +98,10 @@ export default function Home() {
 
 
         {activeTab === "hobbies" && (
-          <div className="p-8 bg-[#242622] rounded-none border border-[#3e423e] shadow-[0_0_0_1px_rgba(194,197,160,0.05)]">
-            <h3 className="text-2xl font-bold mb-4 uppercase tracking-widest text-[#c2c5a0]">Fuerza y Rendimiento</h3>
-            <p className="text-[#7a827a] leading-relaxed">
-                Entrenamiento enfocado en Powerlifting. <br />
-                Records actuales: Cluster Deadlift 144kg / Cluster Back Squat 113kg.
-            </p>
+          <div className="space-y-8">
+            <CodecMusic />
+            <Training />
+            <Videogames />
           </div>
         )}
 
@@ -120,7 +121,7 @@ export default function Home() {
       style={{ background: 'linear-gradient(180deg, rgba(194,197,160,0.06), rgba(194,197,160,0.035))' }}
     >
       <div className="max-w-6xl mx-auto px-6 py-8 text-center">
-        <p className="text-[#7a827a] text-sm uppercase tracking-[0.2em]">© 2026 Octavio Briguera - Córdoba, Argentina</p>
+        <p className="text-[#c2c5a0]/40 text-sm uppercase tracking-[0.2em]">© 2026 Octavio Briguera - Córdoba, Argentina</p>
       </div>
     </footer>
     </>
