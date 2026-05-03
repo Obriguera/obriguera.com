@@ -9,7 +9,7 @@ export default function Perfil() {
       <div className="md:col-span-8">
         <h1 className="text-5xl font-extrabold tracking-tight">Octavio Briguera</h1>
         <p className="text-xl text-blue-600 dark:text-blue-400 font-medium mt-2">
-          Estudiante de Ingeniería | Desarrollador Nazi
+          Estudiante de Ingeniería | Desarrollador
         </p>
         <p className="mt-6 text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl">
           Tengo 22 años y vivo en Córdoba. Me apasiona resolver problemas complejos mediante software. 
