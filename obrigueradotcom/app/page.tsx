@@ -7,10 +7,22 @@ import AcademicTimeline from "./components/academicTimeline";
 import CodecMusic from "./components/codecMusic";
 import Training from "./components/Training";
 import Videogames from "./components/Videogames";
+import ProjectModal from "./components/ProjectModal";
 import { motion, AnimatePresence } from "framer-motion";
+
+interface Project {
+  title: string;
+  description: string;
+  contentPath: string;
+  tech: string[];
+  image: string;
+  link?: string;
+  github?: string;
+}
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState("profesional");
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   const tabs = [
   { id: "profesional", label: "Ingeniería"},
@@ -18,17 +30,21 @@ export default function Home() {
   { id: "otros", label: "Otros"},
   ];
 
-  const proyectosProfesionales = [
+  const proyectosProfesionales: Project[] = [
     {
-      titulo: "StatMuzza",
-      descripcion: "Plataforma de estadísticas deportivas para torneos locales.",
-      tecnologias: ["FastAPI", "Next.js", "PostgreSQL"],
+      title: "StatMuzza",
+      description: "Plataforma de estadísticas deportivas para torneos locales.",
+      contentPath: "/project-info/STATMUZZA.md",
+      tech: ["FastAPI", "Next.js", "PostgreSQL"],
+      image: "",
       link: "https://github.com/StatMuzza/StatMuzza-Backend"
     },
     {
-        titulo: "PC Por Córdoba (PCPC)",
-        descripcion: "Recomendador de hardware con IA utilizando la API de Gemini.",
-        tecnologias: ["Python", "MongoDB", "AI"],
+        title: "PC Por Córdoba (PCPC)",
+        description: "Recomendador de hardware con IA utilizando la API de Gemini.",
+        contentPath: "/project-info/PCPC.md",
+        tech: ["Python", "MongoDB", "AI"],
+        image: "",
         link: "#"
     }
   ];
@@ -86,7 +102,15 @@ export default function Home() {
           <>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {proyectosProfesionales.map((proyecto, index) => (
-                <TarjetaProyecto key={index} {...proyecto} />
+                <TarjetaProyecto
+                  key={index}
+                  titulo={proyecto.title}
+                  descripcion={proyecto.description}
+                  tecnologias={proyecto.tech}
+                  link={proyecto.link ?? "#"}
+                  imagenPlaceholder={proyecto.image || undefined}
+                  onVerProyecto={() => setSelectedProject(proyecto)}
+                />
               ))}
             </div>
 
@@ -113,6 +137,12 @@ export default function Home() {
       </motion.div>
     </AnimatePresence>
   </section>
+
+  <ProjectModal
+    isOpen={!!selectedProject}
+    onClose={() => setSelectedProject(null)}
+    project={selectedProject}
+  />
 
     </main>
 

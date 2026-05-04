@@ -7,9 +7,10 @@ interface ProyectoProps {
   tecnologias: string[];
   link: string;
   imagenPlaceholder?: string;
+  onVerProyecto: () => void;
 }
 
-export default function TarjetaProyecto({ titulo, descripcion, tecnologias, link, imagenPlaceholder }: ProyectoProps) {
+export default function TarjetaProyecto({ titulo, descripcion, tecnologias, imagenPlaceholder, onVerProyecto }: ProyectoProps) {
   return (
     <div className="bg-[#242622] p-6 rounded-sm border border-[#3e423e] flex flex-col h-full">
       {/* Espacio para la imagen */}
@@ -34,14 +35,13 @@ export default function TarjetaProyecto({ titulo, descripcion, tecnologias, link
       </div>
 
       {/* Botón de acción */}
-      <a 
-        href={link} 
-        target="_blank" 
-        rel="noopener noreferrer"
+      <button
+        type="button"
+        onClick={onVerProyecto}
         className="mt-6 w-full py-2 bg-[#c2c5a0] text-[#1a1c1a] rounded-none font-bold uppercase tracking-[0.18em] flex items-center justify-center gap-2 transition-colors hover:bg-[#d2d5b0]"
       >
         Ver Proyecto <ExternalLink size={16} />
-      </a>
+      </button>
     </div>
   );
 }

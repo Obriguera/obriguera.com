@@ -1,11 +1,20 @@
 import React from 'react';
-import { Gamepad2, Target, MessageSquare } from 'lucide-react';
+import { Gamepad2, Target} from 'lucide-react';
 
 export default function Videogames() {
+  const steamProfileUrl = 'https://steamcommunity.com/profiles/76561198866505009/';
+
   const missions = [
-    { title: "Metal Gear Solid Series", status: "100% CLEAR", type: "STEALTH" },
-    { title: "Dark Souls / Elden Ring", status: "COMPLETED", type: "ACTION" },
-    { title: "Retro Classics & Emulation", status: "ACTIVE", type: "RESEARCH" }
+    { title: "Metal Gear Solid Series", status: "Active", type: "STEALTH" },
+    { title: "The Elder Scrolls Series", status: "Active", type: "RPG" },
+    { title: "Dark Souls I & III", status: "100%", type: "ACTION RPG" },
+    { title: "Valheim", status: "Active", type: "SURVIVAL" },
+    { title: "Warhammer: Vermintide 2", status: "Active", type: "CO-OP ACTION" },
+    { title: "Baldurs Gate 3", status: "Active", type: "CRPG" },
+    { title: "Doom Eternal", status: "100%", type: "FPS" },
+    { title: "Dishonored", status: "Active", type: "IMMERSIVE SIM" },
+    { title: "Alice Madness Returns", status: "100%", type: "PLATFORMER" },
+    { title: "Bioshock Infinite", status: "Active", type: "FPS" }
   ];
 
   return (
@@ -14,9 +23,8 @@ export default function Videogames() {
       <div className="px-4 py-2 border-b border-[#3e423e] flex justify-between items-center bg-[#1a1c1a]/50">
         <div className="flex items-center gap-2 text-[#7a827a]">
           <Target size={14} />
-          <span className="text-[10px] tracking-[0.3em] uppercase font-bold">Tactical Simulation History</span>
+          <span className="text-[10px] tracking-[0.3em] uppercase font-bold">Games</span>
         </div>
-        <div className="text-[9px] text-[#c2c5a0]/40 uppercase tracking-widest">Auth: Foxhound_System</div>
       </div>
 
       {/* Lista de Misiones */}
@@ -27,7 +35,7 @@ export default function Videogames() {
             className="group flex items-center justify-between p-4 hover:bg-[#c2c5a0]/5 transition-colors cursor-crosshair"
           >
             <div className="flex items-center gap-4">
-              <div className={`w-1.5 h-1.5 ${mission.status === '100% CLEAR' ? 'bg-[#c2c5a0]' : 'bg-red-600 animate-pulse'}`} />
+              <div className={`w-1.5 h-1.5 ${mission.status === '100% CLEAR' ? 'bg-[#c2c5a0]' : 'bg-green-600 animate-pulse'}`} />
               <div>
                 <div className="text-[9px] text-[#7a827a] uppercase mb-0.5">{mission.type}</div>
                 <div className="text-sm font-bold uppercase tracking-tight text-[#c2c5a0]">{mission.title}</div>
@@ -42,12 +50,14 @@ export default function Videogames() {
 
       {/* Footer del componente con los Links */}
       <div className="p-4 bg-[#1a1c1a]/30 flex gap-4 border-t border-[#3e423e]">
-        <button className="flex items-center gap-2 text-[10px] uppercase tracking-widest text-[#c2c5a0] hover:text-white transition-colors">
+        <a
+          href={steamProfileUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 text-[10px] uppercase tracking-widest text-[#c2c5a0] hover:text-white transition-colors"
+        >
           <Gamepad2 size={14} /> [ Steam_Profile ]
-        </button>
-        <button className="flex items-center gap-2 text-[10px] uppercase tracking-widest text-[#c2c5a0] hover:text-white transition-colors">
-          <MessageSquare size={14} /> [ Discord_Link ]
-        </button>
+        </a>
       </div>
     </div>
   );
