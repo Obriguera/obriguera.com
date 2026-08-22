@@ -1,13 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import Perfil from "./components/perfil"; // Importamos el nuevo componente
-import TarjetaProyecto from "./components/tarjetaProyecto";
-import AcademicTimeline from "./components/academicTimeline";
-import CodecMusic from "./components/codecMusic";
-import Training from "./components/Training";
-import Videogames from "./components/Videogames";
-import ProjectModal from "./components/ProjectModal";
+import Perfil from "../components/Perfil"; // Importamos el nuevo componente
+import TarjetaProyecto from "../components/TarjetaProyecto";
+import AcademicTimeline from "../components/AcademicTimeline";
+import CodecMusic from "../components/CodecMusic";
+import Training from "../components/Training";
+import Videogames from "../components/Videogames";
+import ProjectModal from "../components/ProjectModal";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface Project {
