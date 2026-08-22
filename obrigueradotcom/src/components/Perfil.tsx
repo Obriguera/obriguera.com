@@ -19,18 +19,9 @@ export default function Perfil() {
           Actualmente estoy cursando el último año de mi carrera y dispuesto a afrontar nuevos proyectos y actividades.
         </p>
         
-        {/* Contacto rápido */}
-        <div className="flex gap-4 mt-8">
-          <a href="https://github.com/Obriguera" target="_blank" rel="noopener noreferrer" className="p-2 bg-[#242622] border border-[#3e423e] text-[#c2c5a0] hover:border-[#c2c5a0] transition-colors rounded-none">
-            <FaGithub size={24} />
-          </a>
-          <a href="https://www.linkedin.com/in/obriguera" target="_blank" rel="noopener noreferrer" className="p-2 bg-[#242622] border border-[#3e423e] text-[#c2c5a0] hover:border-[#c2c5a0] transition-colors rounded-none">
-            <FaLinkedin size={24} />
-          </a>
-          <a href="mailto:obriguera03@gmail.com" className="p-2 bg-[#242622] border border-[#3e423e] text-[#c2c5a0] hover:border-[#c2c5a0] transition-colors rounded-none">
-            <Mail size={24} />
-          </a>
-        </div>
+        
+
+        
       </div>
 
       {/* Imagen - 1/3 de la pantalla en escritorio */}
