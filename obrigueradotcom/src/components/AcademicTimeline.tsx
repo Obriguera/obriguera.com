@@ -21,33 +21,30 @@ const eventos: Evento[] = [
 
 export default function AcademicTimeline() {
   return (
-    <div className="bg-[#c2c5a0] p-8 rounded-sm border border-[#3e423e] text-[#1a1c1a] font-mono shadow-inner mt-10">
-      <h2 className="text-2xl font-black mb-8 tracking-tighter uppercase border-b-2 border-[#1a1c1a]/20 pb-2">
+    <div className="bg-[#151515] p-8 rounded-sm border border-[#4b4b4b] text-[#f2f2ee] font-mono shadow-[inset_0_0_20px_rgba(255,255,255,0.02)] mt-10">
+      <h2 className="text-2xl font-black mb-8 tracking-tighter uppercase border-b-2 border-[#f2f2ee]/20 pb-2">
         Timeline Académico
       </h2>
       
-      <div className="relative border-l-2 border-[#1a1c1a]/30 ml-3 space-y-10 pb-4">
+      <div className="relative border-l-2 border-[#f2f2ee]/25 ml-3 space-y-10 pb-4">
         {eventos.map((evento, index) => (
           <div key={index} className="relative pl-8">
             {/* El punto del timeline */}
-            <div className="absolute -left-[9px] top-1 w-4 h-4 bg-[#1a1c1a] rounded-full border-2 border-[#c2c5a0]" />
+            <div className="absolute -left-[9px] top-1 w-4 h-4 bg-[#f2f2ee] rounded-full border-2 border-[#151515]" />
             
-            <span className="text-[10px] font-bold tracking-widest opacity-70">
+            <span className="text-[10px] font-bold tracking-widest opacity-70 text-[#b7b3af]">
               {evento.fecha}
             </span>
-            <h3 className="text-lg font-black leading-none mt-1">
+            <h3 className="text-lg font-black leading-none mt-1 text-[#f2f2ee]">
               {evento.titulo}
             </h3>
-            <p className="text-sm mt-2 leading-relaxed font-medium opacity-80 max-w-2xl">
+            <p className="text-sm mt-2 leading-relaxed font-medium opacity-80 max-w-2xl text-[#d5d1ce]">
               {evento.descripcion}
             </p>
           </div>
         ))}
       </div>
       
-      <div className="mt-6 text-[9px] uppercase tracking-[0.2em] opacity-50 text-right">
-        End of Record // Confidential
-      </div>
     </div>
   );
 }

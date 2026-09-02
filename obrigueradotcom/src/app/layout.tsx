@@ -60,7 +60,7 @@ export default function RootLayout({
       lang="es"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-[#1a1c1a]"> 
+      <body className="min-h-full flex flex-col bg-[#090909]"> 
         {/* Renderizamos el Header arriba de todo */}
         <Header />
         {/* Envolvemos el children en un main que ocupa el resto del espacio */}

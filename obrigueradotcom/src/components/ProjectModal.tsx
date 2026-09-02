@@ -84,38 +84,38 @@ export default function ProjectModal({ isOpen, onClose, project }: ProjectModalP
             initial={{ opacity: 0, scale: 0.9, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
-            className="fixed inset-4 md:inset-10 lg:inset-20 z-[110] bg-[#c2c5a0] rounded-none border-2 border-[#1a1c1a] shadow-2xl flex flex-col overflow-hidden"
+            className="fixed inset-4 md:inset-10 lg:inset-20 z-[110] bg-[#f2f2ee] rounded-none border-2 border-[#090909] shadow-2xl flex flex-col overflow-hidden"
           >
             {/* Cabecera Táctica */}
-            <div className="bg-[#1a1c1a] p-4 flex justify-between items-center text-[#c2c5a0]">
+            <div className="bg-[#090909] p-4 flex justify-between items-center text-[#f2f2ee]">
               <div className="flex items-center gap-4">
                 <h2 className="text-xl font-black uppercase font-mono tracking-tighter">{project.title}</h2>
               </div>
               <button 
                 onClick={onClose}
-                className="hover:bg-[#c2c5a0] hover:text-[#1a1c1a] p-1 transition-colors"
+                className="hover:bg-[#f2f2ee] hover:text-[#090909] p-1 transition-colors"
               >
                 <X size={24} />
               </button>
             </div>
 
             {/* Contenido tipo README */}
-            <div className="flex-1 overflow-y-auto p-6 md:p-12 font-mono text-[#1a1c1a]">
+            <div className="flex-1 overflow-y-auto p-6 md:p-12 font-mono text-[#090909]">
               <div className="max-w-4xl mx-auto">
                 {/* Imagen Principal */}
-                <div className="w-full h-64 md:h-96 bg-[#1a1c1a]/10 border border-[#1a1c1a]/20 mb-8 overflow-hidden relative">
+                <div className="w-full h-64 md:h-96 bg-[#090909]/5 border border-[#090909]/20 mb-8 overflow-hidden relative">
                    <div className="absolute top-2 left-2 text-[10px] uppercase opacity-30 font-bold italic">Source_Attachment_01</div>
                    {/* Aquí iría el componente Image de Next con src={project.image} */}
-                   <div className="w-full h-full flex items-center justify-center text-[#1a1c1a]/20 font-black text-4xl">
+                   <div className="w-full h-full flex items-center justify-center text-[#090909]/20 font-black text-4xl">
                      [ PROJECT_VISUAL ]
                    </div>
                 </div>
 
                 {/* Texto del Proyecto */}
-                <h3 className="text-2xl font-black uppercase mb-4 border-b-2 border-[#1a1c1a] pb-2">Descripción</h3>
+                <h3 className="text-2xl font-black uppercase mb-4 border-b-2 border-[#090909] pb-2">Descripción</h3>
 
                 {/* Renderizado de Markdown */}
-                <article className="prose prose-slate max-w-none prose-headings:uppercase prose-headings:font-black prose-headings:border-b prose-headings:border-[#1a1c1a]/20 prose-p:leading-relaxed prose-p:mb-6 prose-li:list-disc prose-li:ml-4 prose-code:bg-[#1a1c1a]/10 prose-code:px-1 prose-code:rounded-sm">
+                <article className="prose prose-slate max-w-none prose-headings:uppercase prose-headings:font-black prose-headings:border-b prose-headings:border-[#090909]/20 prose-p:leading-relaxed prose-p:mb-6 prose-li:list-disc prose-li:ml-4 prose-code:bg-[#090909]/10 prose-code:px-1 prose-code:rounded-sm">
                   {loadError ? (
                     <p>{loadError}</p>
                   ) : contentMd ? (
@@ -130,7 +130,7 @@ export default function ProjectModal({ isOpen, onClose, project }: ProjectModalP
                   <h4 className="text-sm font-bold uppercase mb-3 opacity-60 italic">Used Technologies //</h4>
                   <div className="flex flex-wrap gap-2">
                     {project.tech.map((t, i) => (
-                      <span key={i} className="px-3 py-1 border border-[#1a1c1a] text-[10px] font-black uppercase">
+                      <span key={i} className="px-3 py-1 border border-[#090909] text-[10px] font-black uppercase">
                         {t}
                       </span>
                     ))}
@@ -138,14 +138,14 @@ export default function ProjectModal({ isOpen, onClose, project }: ProjectModalP
                 </div>
 
                 {/* Acciones Finales */}
-                <div className="flex gap-4 mt-12 pt-8 border-t border-[#1a1c1a]/20">
+                <div className="flex gap-4 mt-12 pt-8 border-t border-[#090909]/20">
                   {project.link && (
-                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="bg-[#1a1c1a] text-[#c2c5a0] px-6 py-3 text-xs font-bold uppercase tracking-widest flex items-center gap-2 hover:opacity-90 transition-opacity">
+                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="bg-[#090909] text-[#f2f2ee] px-6 py-3 text-xs font-bold uppercase tracking-widest flex items-center gap-2 hover:opacity-90 transition-opacity">
                       <ExternalLink size={16} /> Github
                     </a>
                   )}
                   {project.github && (
-                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="border-2 border-[#1a1c1a] px-6 py-3 text-xs font-bold uppercase tracking-widest flex items-center gap-2 hover:bg-[#1a1c1a] hover:text-[#c2c5a0] transition-all">
+                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="border-2 border-[#090909] px-6 py-3 text-xs font-bold uppercase tracking-widest flex items-center gap-2 hover:bg-[#090909] hover:text-[#f2f2ee] transition-all">
                     </a>
                   )}
                 </div>
@@ -153,7 +153,7 @@ export default function ProjectModal({ isOpen, onClose, project }: ProjectModalP
             </div>
 
             {/* Footer del Modal */}
-            <div className="bg-[#1a1c1a]/5 p-2 px-6 text-[8px] uppercase tracking-widest flex justify-between opacity-50 border-t border-[#1a1c1a]/10 font-bold">
+            <div className="bg-[#090909]/5 p-2 px-6 text-[8px] uppercase tracking-widest flex justify-between opacity-50 border-t border-[#090909]/10 font-bold">
               <span>Auth: O. Briguera // Sector: Cordoba</span>
               <span>End of File</span>
             </div>

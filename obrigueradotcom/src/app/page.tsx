@@ -33,12 +33,12 @@ export default function Home() {
 
   const proyectosProfesionales: Project[] = [
     {
-      title: "StatMuzza",
-      description: "Plataforma de estadísticas deportivas para torneos locales.",
-      contentPath: "/project-info/STATMUZZA.md",
-      tech: ["FastAPI", "Next.js", "PostgreSQL"],
-      image: "",
-      link: "https://github.com/StatMuzza/StatMuzza-Backend"
+        title: "TOSTADASO",
+        description: "Ranking de los mejores todados en Córdoba.",
+        contentPath: "/project-info/TOSTADASO.md",
+        tech: ["React"],
+        image: "/img/Logo.svg",
+        link: "https://www.obriguera.com/tostadaso"
     },
     {
         title: "PC Por Córdoba (PCPC)",
@@ -47,27 +47,28 @@ export default function Home() {
         tech: ["Python", "MongoDB", "AI"],
         image: "",
         link: "#"
-    },    
+    }, 
     {
-        title: "TOSTADASO",
-        description: "Ranking de los mejores todados que probé en Córdoba.",
-        contentPath: "/project-info/TOSTADASO.md",
-        tech: ["React"],
-        image: "/img/Logo.svg",
-        link: "https://www.obriguera.com/tostadaso"
-    }
+      title: "StatMuzza",
+      description: "Plataforma de estadísticas deportivas para torneos locales.",
+      contentPath: "/project-info/STATMUZZA.md",
+      tech: ["FastAPI", "Next.js", "PostgreSQL"],
+      image: "",
+      link: "https://github.com/StatMuzza/StatMuzza-Backend"
+    }   
+
   ];
 
   return (
     <>
-    <main className="max-w-6xl mx-auto px-6 py-12 text-[#c2c5a0] transition-colors font-mono">
+    <main className="max-w-6xl mx-auto px-6 py-12 text-[#f2f2ee] transition-colors font-mono">
       
       {/* Llamamos al componente modular Perfil */}
       <Perfil />
       <YoutubeFeatured title="VIDEO: ¿Qué es un compilador?¿Para que sirve?" videoId="SB9LXpO6yWo"/>
       {/* --- SELECTOR (TABS) --- */}
       <section className="mb-12 flex justify-center">
-    <div className="inline-flex gap-1 p-1 bg-[#242622] border border-[#3e423e] rounded-none shadow-[0_0_0_1px_rgba(194,197,160,0.08)]">
+    <div className="inline-flex gap-1 p-1 bg-[#151515] border border-[#4b4b4b] rounded-none shadow-[0_0_0_1px_rgba(255,255,255,0.04)]">
       {tabs.map((tab) => {
         const isActive = activeTab === tab.id;
 
@@ -77,13 +78,13 @@ export default function Home() {
             onClick={() => setActiveTab(tab.id)}
             className={`
               relative flex items-center gap-2 px-6 py-2.5 text-xs font-bold uppercase tracking-[0.28em] transition-colors duration-300 rounded-none
-              ${isActive ? "text-[#1a1c1a]" : "text-[#7a827a] hover:text-[#c2c5a0]"}
+              ${isActive ? "text-[#090909]" : "text-[#b7b3af] hover:text-[#f2f2ee]"}
             `}
           >
             {isActive && (
               <motion.div
                 layoutId="activePill"
-                className="absolute inset-0 bg-[#c2c5a0] border border-[#c2c5a0] rounded-none shadow-[0_0_18px_rgba(194,197,160,0.22)]"
+                className="absolute inset-0 bg-[#f2f2ee] border border-[#f2f2ee] rounded-none shadow-[0_0_18px_rgba(255,255,255,0.14)]"
                 transition={{ type: "spring", duration: 0.5 }}
               />
             )}
@@ -139,8 +140,8 @@ export default function Home() {
         )}
 
         {activeTab === "otros" && (
-          <div className="p-20 border border-dashed border-[#3e423e] rounded-none text-center bg-[#242622]">
-            <p className="text-[#7a827a] uppercase tracking-[0.22em] text-lg">Próximamente: Blog de ingeniería y hardware retro.</p>
+          <div className="p-20 border border-dashed border-[#4b4b4b] rounded-none text-center bg-[#151515]">
+            <p className="text-[#b7b3af] uppercase tracking-[0.22em] text-lg">Próximamente: Blog de ingeniería y hardware retro.</p>
           </div>
         )}
       </motion.div>
@@ -157,10 +158,10 @@ export default function Home() {
 
     <footer
       className="w-full"
-      style={{ background: 'linear-gradient(180deg, rgba(194,197,160,0.06), rgba(194,197,160,0.035))' }}
+      style={{ background: 'linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02))' }}
     >
       <div className="max-w-6xl mx-auto px-6 py-8 text-center">
-        <p className="text-[#c2c5a0]/40 text-sm uppercase tracking-[0.2em]">© 2026 Octavio Briguera - Córdoba, Argentina</p>
+        <p className="text-[#f2f2ee]/40 text-sm uppercase tracking-[0.2em]">© 2026 Octavio Briguera - Córdoba, Argentina</p>
       </div>
     </footer>
     </>

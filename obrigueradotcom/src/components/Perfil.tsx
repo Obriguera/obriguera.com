@@ -7,26 +7,22 @@ export default function Perfil() {
     <section className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center mb-20">
       {/* Texto - 2/3 de la pantalla en escritorio */}
       <div className="md:col-span-8">
-        <h1 className="text-5xl md:text-6xl font-extrabold uppercase tracking-[0.28em] text-[#c2c5a0]">
+        <h1 className="text-5xl md:text-6xl font-extrabold uppercase tracking-[0.28em] text-[#f2f2ee]">
           Octavio Briguera
         </h1>
-        <p className="text-lg md:text-xl text-[#c2c5a0] font-medium mt-3 uppercase tracking-[0.22em]">
+        <p className="text-lg md:text-xl text-[#f2f2ee] font-medium mt-3 uppercase tracking-[0.22em]">
           Estudiante de Ingeniería Informática
         </p>
-        <p className="mt-6 text-[#7a827a] leading-relaxed max-w-2xl">
+        <p className="mt-6 text-[#b7b3af] leading-relaxed max-w-2xl">
           Hola!! Tengo 22 años y vivo en Córdoba, Argentina. Soy una persona que le gustan los desafíos y resolver problemas creativamente.
           Me apasionan el software y los videojuegos. 
           Actualmente estoy cursando el último año de mi carrera y dispuesto a afrontar nuevos proyectos y actividades.
         </p>
-        
-        
-
-        
       </div>
 
       {/* Imagen - 1/3 de la pantalla en escritorio */}
       <div className="md:col-span-4 flex justify-center">
-        <div className="relative w-64 h-64 md:w-full md:max-w-xs aspect-square border-2 border-[#c2c5a0] shadow-[0_0_24px_rgba(194,197,160,0.18)] overflow-hidden bg-[#1a1c1a] rounded-none grayscale-[35%] hover:grayscale-0 hover:saturate-110 transition-[filter] duration-300">
+        <div className="relative w-64 h-64 md:w-full md:max-w-xs aspect-square border-2 border-[#f2f2ee] shadow-[0_0_24px_rgba(255,255,255,0.12)] overflow-hidden bg-[#090909] rounded-none grayscale-[30%] hover:grayscale-0 hover:saturate-110 transition-[filter] duration-300">
           <Image 
             src="/foto-perfil.jpeg" 
             alt="Octavio Briguera"
