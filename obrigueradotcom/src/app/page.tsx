@@ -47,6 +47,14 @@ export default function Home() {
         tech: ["Python", "MongoDB", "AI"],
         image: "",
         link: "#"
+    },    
+    {
+        title: "TOSTADASO",
+        description: "Ranking de los mejores todados que probé en Córdoba.",
+        contentPath: "/project-info/TOSTADASO.md",
+        tech: ["React"],
+        image: "/img/Logo.svg",
+        link: "https://www.obriguera.com/tostadaso"
     }
   ];
 

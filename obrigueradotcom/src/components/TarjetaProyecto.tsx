@@ -14,8 +14,16 @@ export default function TarjetaProyecto({ titulo, descripcion, tecnologias, imag
   return (
     <div className="bg-[#242622] p-6 rounded-sm border border-[#3e423e] flex flex-col h-full">
       {/* Espacio para la imagen */}
-      <div className="h-40 bg-[#1a1c1a] border border-[#3e423e] rounded-sm mb-4 flex items-center justify-center text-[#7a827a] italic">
-        {imagenPlaceholder || "Imagen Proyecto"}
+      <div className="h-40 bg-[#1a1c1a] border border-[#3e423e] rounded-sm mb-4 flex items-center justify-center overflow-hidden">
+        {imagenPlaceholder ? (
+          <img
+            src={imagenPlaceholder}
+            alt={`${titulo} preview`}
+            className="h-full w-full object-contain p-3"
+          />
+        ) : (
+          <span className="text-[#7a827a] italic">Imagen Proyecto</span>
+        )}
       </div>
 
       {/* Info del proyecto */}
