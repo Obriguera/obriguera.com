@@ -9,6 +9,7 @@ import Training from "../components/Training";
 import Videogames from "../components/Videogames";
 import ProjectModal from "../components/ProjectModal";
 import { motion, AnimatePresence } from "framer-motion";
+import YoutubeFeatured from "@/components/YoutubeFeatured";
 
 interface Project {
   title: string;
@@ -46,6 +47,14 @@ export default function Home() {
         tech: ["Python", "MongoDB", "AI"],
         image: "",
         link: "#"
+    },    
+    {
+        title: "TOSTADASO",
+        description: "Ranking de los mejores todados que probé en Córdoba.",
+        contentPath: "/project-info/TOSTADASO.md",
+        tech: ["React"],
+        image: "/img/Logo.svg",
+        link: "https://www.obriguera.com/tostadaso"
     }
   ];
 
@@ -55,7 +64,7 @@ export default function Home() {
       
       {/* Llamamos al componente modular Perfil */}
       <Perfil />
-
+      <YoutubeFeatured title="VIDEO: ¿Qué es un compilador?¿Para que sirve?" videoId="SB9LXpO6yWo"/>
       {/* --- SELECTOR (TABS) --- */}
       <section className="mb-12 flex justify-center">
     <div className="inline-flex gap-1 p-1 bg-[#242622] border border-[#3e423e] rounded-none shadow-[0_0_0_1px_rgba(194,197,160,0.08)]">
